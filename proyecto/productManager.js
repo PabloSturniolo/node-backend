@@ -1,7 +1,6 @@
 // Realizar una clase "ProductManager" que gestione un conjunto de productos.
 
 import fs from 'fs'
-import { json } from 'stream/consumers'
 
 class ProductManager {
     constructor(path) {
@@ -116,26 +115,44 @@ class ProductManager {
     }
 }
 
-let productManager = new ProductManager('data/data.json')
+let productManager = new ProductManager('data/products.json')
 
 async function manager() {
     console.log("llamo a los productos")
     console.log(productManager.getProducts())
     console.log("agrego un producto")
-    let code = await productManager.addProduct({ title: 'producto prueba', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', id: 'abc123', stock: 25 })
+    let code
+    code = await productManager.addProduct({ title: 'producto prueba1', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba2', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba3', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba4', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba5', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba6', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba7', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba8', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba9', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
+    console.log(code)
+    console.log("agrego un producto")
+    code = await productManager.addProduct({ title: 'producto prueba10', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', stock: 25 })
     console.log(code)
     console.log("llamo a los productos")
     console.log(productManager.getProducts())
-    // console.log(prueba.addProduct({ title: 'producto prueba', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', id: 'abc123', stock: 25 }))
-    console.log("busco un producto")
-    console.log(productManager.getProductById('abc123'))
-    console.log("actualizo un producto")
-    await productManager.updateProduct('abc123',{ title: 'producto prueba', description: 'Este es un producto prueba', price: 300, thumbnail: 'Sin imagen', id: 'abc123', stock: 25 })
-    console.log("llamo a los productos")
-    console.log(productManager.getProducts())
-    console.log("borro un producto")
-    await productManager.deleteProduct('abc123')
 }
-manager()
-
+//manager()
 export default productManager

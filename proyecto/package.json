@@ -2,7 +2,7 @@
   "name": "proyecto",
   "version": "1.0.0",
   "description": "Se creo la clase ProductManager que tiene un array de productos y ademas incluye 3 metodos:\r . addProduct: para agregar un producto al array\r . getProduct: para devolver el array con todos sus productos\r . getProductById: para devolver un producto por su id.",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
